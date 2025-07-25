@@ -14,15 +14,15 @@ public class BabithaApp {
         String splitChars = "[,;:.!?@#$%\\s]+"; // Added \\s for whitespace and made + for one or more delimiters
         String[] tokens = paragraph.split(splitChars);
 
-        List<String> wordsList = new ArrayList<>(); // To store all words in order
-        Map<String, Integer> wordCounts = new HashMap<>(); // To store word frequencies
+        List<String> wordsList = new ArrayList<>();
+        Map<String, Integer> wordCounts = new HashMap<>();
 
         for (String token : tokens) {
 
-            if (!token.trim().isEmpty()) { // Use trim() to handle tokens that might be just whitespace
-                String word = token.toLowerCase(); // Convert to lowercase for case-insensitive counting
-                wordsList.add(word); // Add to the list of all words
-                wordCounts.put(word, wordCounts.getOrDefault(word, 0) + 1); // Increment count in map
+            if (!token.trim().isEmpty()) {
+                String word = token.toLowerCase();
+                wordsList.add(word);
+                wordCounts.put(word, wordCounts.getOrDefault(word, 0) + 1);
             }
         }
 
@@ -36,7 +36,7 @@ public class BabithaApp {
             System.out.println(word + "-" + wordCounts.get(word));
         }
 
-        sc.close(); // Close the scanner
+        sc.close();
     }
     }
 
