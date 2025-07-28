@@ -13,7 +13,7 @@ public class UserInterface {
         String cName=cd[1];
         long cNum=Long.parseLong(cd[2]);
         Customer customer=new Customer(cId,cName,cNum);
-        System.out.println("Enter the musical Instrumental Details");
+        System.out.println("Enter the musical Instrument Details");
         String musDetails=sc.nextLine();
         String[] mus=musDetails.split(":");
         int iId=Integer.parseInt(mus[0]);
