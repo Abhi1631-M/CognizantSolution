@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class DepartmentGrouping {
     private HashSet<String> employeeSet=new HashSet<>();
-    private HashSet<String> getEmployeeSet()
+    public HashSet<String> getEmployeeSet()
     {
         return employeeSet;
     }
